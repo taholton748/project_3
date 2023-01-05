@@ -8,13 +8,16 @@ type User {
   email: String
   isAuthenticated: Boolean
 }
+
 type Auth {
   token: ID
   user: User
 }
+
 type Query {
   getCurrentUser: User
 }
+
 type Mutation {
   createUser(firstName: String!, lastName: String!, email: String!, password: String!): Auth
   updateUser(firstName: String!, lastName: String!, email: String!): User
